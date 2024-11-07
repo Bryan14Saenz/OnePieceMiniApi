@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eee;
+  font-family: "Poppins", sans-serif;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+#header .logo img {
+  width: 150px;
+  transition: all 0.3s ease-in-out;
+}
+#header .logo img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  filter: drop-shadow(0px 0px 10px #000);
+}
+#header nav ul {
+  display: flex;
+  gap: 20px;
+}
+#header nav ul li a {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+}
+#header nav ul li a:hover {
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.3333333333);
+}
+
+main {
+  animation: aparecer 1s ease-in-out;
+  margin: 20px 0px;
+}
+main .seleccion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+main .seleccion .buscador input {
+  width: 200px;
+  height: 30px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #ccc;
+}
+main .seleccion .buscador input:focus {
+  outline: none;
+  border: 1px solid #000;
+}
+main .seleccion .buscador input::placeholder {
+  color: #aaa;
+}
+main .seleccion .buscador label {
+  margin: 0px 20px 0px 5px;
+  transition: all 0.3s ease-in-out;
+}
+main .seleccion .buscador label:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+main .seleccion .buscador label:hover i {
+  color: rgba(0, 0, 0, 0.3333333333);
+}
+main .seleccion .btnCategorias {
+  display: flex;
+  gap: 10px;
+}
+main .seleccion .btnCategorias button {
+  text-transform: uppercase;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #000;
+}
+main .seleccion .btnCategorias button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.3333333333);
+  color: #fff;
+}
+main #piratas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 15px;
+  margin: 15px;
+}
+main #piratas .card {
+  width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #ccc;
+  background-color: transparent;
+}
+main #piratas .card .card-body {
+  padding: 15px;
+  text-align: center;
+}
+main #piratas .card .card-body .idPirata {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  font-size: 0.7rem;
+}
+main #piratas .card .card-body p {
+  font-size: 1rem;
+  margin: 10px 0px;
+}
+main #piratas .card .card-body img {
+  width: 100%;
+  min-width: 6rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+main #piratas .card .card-body img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  background-color: #aaa;
+  border-top: 1px solid #ccc;
+}
+#footer h2 {
+  font-size: 1.5rem;
+  margin: 10px 0px;
+}
+#footer .redes {
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+}
+#footer .redes a {
+  color: #000;
+  font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+#footer .redes a:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: rgba(0, 0, 0, 0.3333333333);
+}
+#footer p {
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  main #piratas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  main #piratas {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
