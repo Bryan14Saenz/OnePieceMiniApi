@@ -35,7 +35,7 @@ body {
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 0.7em;
+  font-size: 0.6em;
 }
 #header nav ul li a:hover {
   text-decoration: underline;
@@ -139,6 +139,47 @@ main #piratas .card .card-body img:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
+main #marines {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 15px;
+  margin: 15px;
+}
+main #marines .card {
+  width: 140px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #ccc;
+  background-color: transparent;
+}
+main #marines .card .card-body {
+  padding: 15px;
+  text-align: center;
+}
+main #marines .card .card-body .idMarine {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0px;
+  font-size: 0.7rem;
+}
+main #marines .card .card-body p {
+  font-size: 0.8rem;
+  margin: 5px 0px;
+}
+main #marines .card .card-body img {
+  width: 100%;
+  min-width: 5rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+main #marines .card .card-body img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
 
 #footer {
   display: flex;
@@ -172,6 +213,10 @@ main #piratas .card .card-body img:hover {
   font-size: 0.8rem;
 }
 
+.ocultar {
+  display: none;
+}
+
 @media (min-width: 500px) {
   #header .logo img {
     width: 150px;
@@ -180,6 +225,9 @@ main #piratas .card .card-body img:hover {
     font-size: 0.8rem;
   }
   main #piratas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  main #marines {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -197,6 +245,12 @@ main #piratas .card .card-body img:hover {
     grid-template-columns: repeat(4, 1fr);
   }
   main #piratas .card {
+    width: 180px;
+  }
+  main #marines {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  main #marines .card {
     width: 180px;
   }
 }
@@ -237,6 +291,15 @@ main #piratas .card .card-body img:hover {
     font-size: 1.5rem;
   }
   main #piratas .card .card-body .idPirata {
+    font-size: 2rem;
+  }
+  main #marines .card {
+    width: 250px;
+  }
+  main #marines .card .card-body p {
+    font-size: 1.5rem;
+  }
+  main #marines .card .card-body .idMarine {
     font-size: 2rem;
   }
   #footer p {

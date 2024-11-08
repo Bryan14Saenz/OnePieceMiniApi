@@ -41,7 +41,7 @@ body {
           color: #000;
           text-decoration: none;
           text-transform: uppercase;
-          font-size: 0.7em;
+          font-size: 0.6em;
 
           &:hover {
             text-decoration: underline;
@@ -168,6 +168,54 @@ main {
       }
     }
   }
+
+  #marines {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 15px;
+    margin: 15px;
+
+    .card {
+      width: 140px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      border: 1px solid #ccc;
+      background-color: transparent;
+
+      .card-body {
+        padding: 15px;
+        text-align: center;
+
+        .idMarine {
+          color: #fff;
+          background-color: #0005;
+          padding: 5px;
+          border-radius: 5px;
+          margin: 5px 0px;
+          font-size: 0.7rem;
+        }
+
+        p {
+          font-size: 0.8rem;
+          margin: 5px 0px;
+        }
+
+        img {
+          width: 100%;
+          min-width: 5rem;
+          border-radius: 10px;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
 }
 
 #footer {
@@ -207,6 +255,10 @@ main {
   }
 }
 
+.ocultar {
+  display: none;
+}
+
 @media (min-width: 500px) {
   #header {
     .logo {
@@ -227,6 +279,10 @@ main {
 
   main {
     #piratas {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    #marines {
       grid-template-columns: repeat(3, 1fr);
     }
   }
@@ -254,6 +310,14 @@ main {
 
   main {
     #piratas {
+      grid-template-columns: repeat(4, 1fr);
+
+      .card {
+        width: 180px;
+      }
+    }
+
+    #marines {
       grid-template-columns: repeat(4, 1fr);
 
       .card {
@@ -322,6 +386,22 @@ main {
           }
 
           .idPirata {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    #marines {
+      .card {
+        width: 250px;
+
+        .card-body {
+          p {
+            font-size: 1.5rem;
+          }
+
+          .idMarine {
             font-size: 2rem;
           }
         }
