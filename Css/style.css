@@ -19,7 +19,7 @@ body {
   border-bottom: 1px solid #ccc;
 }
 #header .logo img {
-  width: 150px;
+  width: 100px;
   transition: all 0.3s ease-in-out;
 }
 #header .logo img:hover {
@@ -29,13 +29,13 @@ body {
 }
 #header nav ul {
   display: flex;
-  gap: 20px;
+  gap: 5px;
 }
 #header nav ul li a {
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 0.6rem;
+  font-size: 0.7em;
 }
 #header nav ul li a:hover {
   text-decoration: underline;
@@ -43,17 +43,16 @@ body {
 }
 
 main {
-  animation: aparecer 1s ease-in-out;
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 main .seleccion {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
 }
 main .seleccion .buscador input {
-  width: 200px;
+  width: 150px;
   height: 30px;
   padding: 5px 10px;
   border-radius: 5px;
@@ -68,7 +67,7 @@ main .seleccion .buscador input::placeholder {
   color: #aaa;
 }
 main .seleccion .buscador label {
-  margin: 0px 20px 0px 5px;
+  margin: 0px 10px 0px 5px;
   transition: all 0.3s ease-in-out;
 }
 main .seleccion .buscador label:hover {
@@ -80,11 +79,11 @@ main .seleccion .buscador label:hover i {
 }
 main .seleccion .btnCategorias {
   display: flex;
-  gap: 10px;
+  gap: 5px;
 }
 main .seleccion .btnCategorias button {
   text-transform: uppercase;
-  width: 100px;
+  width: 80px;
   height: 30px;
   border-radius: 5px;
   font-size: 0.7rem;
@@ -107,7 +106,7 @@ main #piratas {
   margin: 15px;
 }
 main #piratas .card {
-  width: 200px;
+  width: 140px;
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -121,20 +120,18 @@ main #piratas .card .card-body {
 main #piratas .card .card-body .idPirata {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.3333333333);
-  padding: 5px 10px;
+  padding: 5px;
   border-radius: 5px;
-  margin: 10px 0px;
+  margin: 5px 0px;
   font-size: 0.7rem;
 }
 main #piratas .card .card-body p {
-  font-size: 1rem;
-  margin: 10px 0px;
+  font-size: 0.8rem;
+  margin: 5px 0px;
 }
 main #piratas .card .card-body img {
   width: 100%;
-  min-width: 6rem;
-  object-fit: cover;
-  object-position: center;
+  min-width: 5rem;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
@@ -175,14 +172,75 @@ main #piratas .card .card-body img:hover {
   font-size: 0.8rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
+  #header .logo img {
+    width: 150px;
+  }
+  #header nav ul li a {
+    font-size: 0.8rem;
+  }
   main #piratas {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 700px) {
+  #header .logo img {
+    width: 200px;
+  }
+  #header nav ul {
+    gap: 15px;
+  }
+  #header nav ul li a {
+    font-size: 1rem;
+  }
   main #piratas {
     grid-template-columns: repeat(4, 1fr);
+  }
+  main #piratas .card {
+    width: 180px;
+  }
+}
+@media (min-width: 900px) {
+  #header .logo img {
+    width: 250px;
+  }
+  #header nav ul {
+    gap: 20px;
+  }
+  #header nav ul li a {
+    font-size: 1.5rem;
+  }
+  main .seleccion {
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  main .seleccion .buscador input {
+    width: 200px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  main .seleccion .buscador label {
+    font-size: 1.5rem;
+  }
+  main .seleccion .btnCategorias {
+    gap: 10px;
+  }
+  main .seleccion .btnCategorias button {
+    font-size: 1rem;
+    width: 100px;
+    height: 40px;
+  }
+  main #piratas .card {
+    width: 250px;
+  }
+  main #piratas .card .card-body p {
+    font-size: 1.5rem;
+  }
+  main #piratas .card .card-body .idPirata {
+    font-size: 2rem;
+  }
+  #footer p {
+    font-size: 1rem;
   }
 }
 
